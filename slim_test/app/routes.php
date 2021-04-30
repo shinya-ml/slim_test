@@ -23,4 +23,8 @@ return function (App $app) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
+
+    $app->group('/todos', function(Group $group){
+        $group->get('', ListTodosAction::class);
+    });
 };
